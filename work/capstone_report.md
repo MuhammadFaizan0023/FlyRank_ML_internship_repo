@@ -13,8 +13,8 @@ A random split was found to inflate the model's macro F1 to 0.582, traced to hea
 
 ## 1. Problem framing
 
-Decision: flag which pages need a content refresh, so a human reviewer knows where to look first.
-Who acts: an SEO team or content owner who cannot manually audit every page's analytics on a recurring basis.
+Decision: flag which pages need a content refresh, so a human reviewer knows where to look first. <br>
+Who acts: an SEO team or content owner who cannot manually audit every page's analytics on a recurring basis. <br>
 Improvement: replaces a full manual sweep with a short, ranked list — a human still inspects each flagged page and decides the fix, but no longer has to find the candidates by hand.
 What this can and cannot claim
 This is decision support. It ranks and flags; a human with domain expertise still diagnoses the specific problem and decides the fix.
