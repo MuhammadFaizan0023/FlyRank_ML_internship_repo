@@ -72,12 +72,3 @@ Open Colab, download the file from baseline_score.ipynb and run all the capstone
 Built on the FlyRank internship data warehouse, provided by flyrank.ai, released as FlyRank/internship-warehouse on Hugging Face.
 FlyRank ML Internship Capstone · Muhammad Faizan · 2026
 
----
-
-> **Claims checklist before submitting:** observed / measured / directional / decision-support
-> **Metrics vs. base rate:** report your task's base rate (majority-class %) next to any
-> precision@K or accuracy — a high score can just be a high base rate. AUC / lift over
-> baseline are the honest discrimination numbers.
-> language everywhere · no causal claims without an experiment or causal design · no
-> "predicted Google's algorithm" · no client-identifying details · numbers in this report
-> match a fresh re-run.
