@@ -7,7 +7,7 @@
 
 ## 0. Abstract
 
-SEO teams manage far more pages than they can manually re-check for decline. This project builds decline_score, a rule-derived proxy label (0–17) counting how many of 17 performance signals — search visibility, click-through rate, engagement, and traffic across six acquisition channels — moved in a negative direction between a prior 30-day window and the most recent 30 days. A multi-class classifier is trained to predict this label from prior-window features alone, and is evaluated under a client-holdout split so that no client's content is seen in both training and testing.
+SEO teams manage far more pages than they can manually re-check for decline. This project builds decline_score, a rule-derived proxy label (0–17) counting how many of 17 performance signals — search visibility, click-through rate, engagement, and traffic across six acquisition channels, moved in a negative direction between a prior 30-day window and the most recent 30 days. A multi-class classifier is trained to predict this label from prior-window features alone, and is evaluated under a client-holdout split so that no client's content is seen in both training and testing.<br>
 
 A random split was found to inflate the model's macro F1 to 0.582, traced to heavy overlap between train and test content. The honest, client-grouped evaluation puts macro F1 at 0.444 and ROC-AUC at 0.913 — reliable at the extremes of the score range, weaker in the middle. The output is packaged as a ranked, reason-coded action playbook with explicit confidence tiers, intended strictly as decision support for a human reviewer, never as an automated content-change trigger.
 
