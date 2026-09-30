@@ -361,7 +361,7 @@
     <p style="font-size:.82rem;color:var(--ink-soft);"><span class="tierdot urgent"></span>urgent tier &nbsp; <span class="tierdot mid"></span>mid-confidence tier &nbsp; <span class="tierdot low"></span>near-zero training data</p>
 
     <figure>
-      <img src="paper/figures/fig3_f1_by_class_support.png" alt="F1 score and sample support by decline_score class">
+      <img src="work/figures/fig3_f1_by_class_support.png" alt="F1 score and sample support by decline_score class">
       <figcaption><b>Figure 3.</b> F1-score (bars) against sample support (line, log scale) per class. Reliability climbs with volume through the middle of the range — but class 17 breaks that pattern, scoring well on moderate support because every row shares one distinctive, fully-agreed pattern rather than needing more data to separate it.</figcaption>
     </figure>
   </section>
@@ -382,7 +382,7 @@
     <p>Classes 3 and 4 have almost no training examples (2 and 17 respectively) and score 0 across precision, recall, and F1 — this is a data volume ceiling, not a fixable model defect. The middle of the range (roughly 8–13) is weak for a different reason: the same aggregate score can arise from many different combinations of which specific conditions triggered, so the feature pattern per class is far less consistent even with tens of thousands of examples.</p>
 
     <figure>
-      <img src="paper/figures/fig4_confidence_tiers.png" alt="Confidence tiers by class, color coded by reliability">
+      <img src="work/figures/fig4_confidence_tiers.png" alt="Confidence tiers by class, color coded by reliability">
       <figcaption><b>Figure 4.</b> Where to trust the score at face value versus where to treat it as a rough signal requiring manual verification.</figcaption>
     </figure>
 
@@ -411,20 +411,20 @@
     </table></div>
 
     <figure>
-      <img src="paper/figures/fig7_tier_distribution.png" alt="Bar chart of page counts per recommendation tier">
+      <img src="work/figures/fig7_tier_distribution.png" alt="Bar chart of page counts per recommendation tier">
       <figcaption><b>Figure 7.</b> Most of the portfolio sits in scheduled review — routine, low-urgency monitoring; the urgent tier is a comparatively small, high-priority slice.</figcaption>
     </figure>
 
     <p>At the extremes of the score range, evaluated accuracy is highest (class 16–17 F1 of 0.70–0.75), so a reviewer can act on those rankings with more confidence. In the middle of the range, the same score can arise from very different combinations of triggered reason codes, and accuracy is weaker (F1 0.39–0.55) — "what to do first" there means <em>look here next, then verify manually</em>, not <em>treat the order as decisive</em>.</p>
 
     <figure>
-      <img src="paper/figures/fig1_prev_vs_last.png" alt="Grid of prev30 vs last30 metric averages for the top 20 highest-scoring pages">
+      <img src="work/figures/fig1_prev_vs_last.png" alt="Grid of prev30 vs last30 metric averages for the top 20 highest-scoring pages">
       <figcaption><b>Figure 1.</b> Prior-window vs. latest-window averages across the top 20 urgent-tier pages — nearly every metric drops toward zero, the signature of a maximum decline_score.</figcaption>
     </figure>
 
     <h3 class="subhead">How the queue reaches a person</h3>
     <figure>
-      <img src="paper/figures/fig2_decision_support_workflow.png" alt="Workflow diagram from decline_score through reason codes to human reviewer to action">
+      <img src="work/figures/fig2_decision_support_workflow.png" alt="Workflow diagram from decline_score through reason codes to human reviewer to action">
       <figcaption><b>Figure 2.</b> The score and its reason codes inform a human reviewer's decision on effort and action — no step in this chain is automated.</figcaption>
     </figure>
 
@@ -433,7 +433,7 @@
     <p><b>Never automated:</b> triggering a refresh, or deciding the specific type of problem a page has. Both remain a human judgment call, full stop — not a "review carefully" caveat but a hard boundary.</p>
 
     <figure>
-      <img src="paper/figures/fig5_never_automated.png" alt="Diagram showing model output stopping at the score, with diagnosis and refresh decision marked human-only">
+      <img src="work/figures/fig5_never_automated.png" alt="Diagram showing model output stopping at the score, with diagnosis and refresh decision marked human-only">
       <figcaption><b>Figure 5.</b> The pipeline stops at a score. Diagnosis and the refresh decision have no automated path.</figcaption>
     </figure>
   </section>
@@ -445,7 +445,7 @@
     <p>Figures 1–2, 5, and 7 support Section 6; Figures 3 and 4 support Sections 4 and 5 respectively. One additional forward-looking artifact — not yet backed by observed monitoring data — is included below.</p>
 
     <figure>
-      <img src="paper/figures/fig6_staleness_triggers.png" alt="Diagram of three staleness triggers for the recommendation queue">
+      <img src="work/figures/fig6_staleness_triggers.png" alt="Diagram of three staleness triggers for the recommendation queue">
       <figcaption><b>Figure 6.</b> Three conditions that would tell a maintainer the queue has gone stale. Only the 30-day window expiry is measurable from existing data today; the other two require monitoring processes (a control-page baseline check, a reviewer feedback log) that do not yet exist.</figcaption>
     </figure>
   </section>
